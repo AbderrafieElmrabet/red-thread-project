@@ -1,0 +1,17 @@
+
+@startuml
+left to right direction
+
+actor Administrator
+actor Student
+actor Teacher
+
+rectangle "Digital Displayboard System" {
+    Administrator --> (Post announcement)
+    Administrator --> (Delete announcement)
+
+    Student --> (View announcements)
+
+    Teacher --> (View announcements)
+}
+@enduml
