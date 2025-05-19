@@ -1,0 +1,39 @@
+classDiagram
+    class User {
+        +String id
+        +String name
+        +String email
+        +String role
+        +login()
+        +logout()
+    }
+
+    class Admin {
+        +createPost()
+        +editPost()
+        +deletePost()
+        +manageUsers()
+    }
+
+    class Post {
+        +String id
+        +String title
+        +String content
+        +Date datePosted
+        +Boolean isVisible
+        +create()
+        +update()
+        +archive()
+    }
+
+    class DisplayBoard {
+        +List<Post> posts
+        +showPosts()
+        +filterByDate()
+        +filterByCategory()
+    }
+
+    User <|-- Admin
+    Admin --> Post
+    Post --> DisplayBoard
+    User --> DisplayBoard
