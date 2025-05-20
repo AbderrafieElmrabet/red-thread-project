@@ -1,39 +1,41 @@
 classDiagram
-    class User {
-        +String id
-        +String name
-        +String email
-        +String role
-        +login()
-        +logout()
-    }
+direction LR
 
-    class Admin {
-        +createPost()
-        +editPost()
-        +deletePost()
-        +manageUsers()
-    }
+User <|-- Admin
+Admin --> Post
+Post --> DisplayBoard
+User --> DisplayBoard
 
-    class Post {
-        +String id
-        +String title
-        +String content
-        +Date datePosted
-        +Boolean isVisible
-        +create()
-        +update()
-        +archive()
-    }
+class User {
+  +id: String
+  +name: String
+  +email: String
+  +role: String
+  +login()
+  +logout()
+}
 
-    class DisplayBoard {
-        +List<Post> posts
-        +showPosts()
-        +filterByDate()
-        +filterByCategory()
-    }
+class Admin {
+  +createPost()
+  +editPost()
+  +deletePost()
+  +manageUsers()
+}
 
-    User <|-- Admin
-    Admin --> Post
-    Post --> DisplayBoard
-    User --> DisplayBoard
+class Post {
+  +id: String
+  +title: String
+  +content: String
+  +datePosted: Date
+  +isVisible: Boolean
+  +create()
+  +update()
+  +archive()
+}
+
+class DisplayBoard {
+  +posts: List<Post>
+  +showPosts()
+  +filterByDate()
+  +filterByCategory()
+}

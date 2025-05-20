@@ -7,15 +7,17 @@ actor Teacher
 
 rectangle "Digital Displayboard System" {
     Administrator --> (Log in)
-    Administrator --> (Post announcement)
-    Administrator --> (Edit announcement)
+    Administrator --> (Create announcement)
+    Administrator --> (Update announcement)
     Administrator --> (Delete announcement)
+    Administrator --> (View announcements)
+    Administrator --> (View statistics)
 
     Student --> (View announcements)
-    Student --> (Filter/search announcements)
+    Student --> (View statistics)
 
     Teacher --> (View announcements)
-    Teacher --> (Filter/search announcements)
+    Teacher --> (View statistics)
 }
 
 @enduml

@@ -3,15 +3,11 @@
 left to right direction
 
 actor Administrator
-actor Student
-actor Teacher
 
 rectangle "Digital Displayboard System" {
     Administrator --> (Log in)
-    Administrator --> (Edit announcement)
-
-    Student --> (Filter/search announcements)
-
-    Teacher --> (Filter/search announcements)
+    Administrator --> (Create announcement)
+    Administrator --> (Update announcement)
+    Administrator --> (Delete announcement)
 }
 @enduml
