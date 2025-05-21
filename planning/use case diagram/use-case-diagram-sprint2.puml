@@ -1,13 +1,10 @@
-
 @startuml
+actor Admin
 left to right direction
-
-actor Administrator
-
-rectangle "Digital Displayboard System" {
-    Administrator --> (Log in)
-    Administrator --> (Create announcement)
-    Administrator --> (Update announcement)
-    Administrator --> (Delete announcement)
+rectangle "Sprint 2: Post Management" {
+    Admin -- (Create Post)
+    Admin -- (Update Post)
+    Admin -- (Delete Post)
 }
+
 @enduml

@@ -1,23 +1,11 @@
 @startuml
+actor Admin
 left to right direction
-
-actor Administrator
-actor Student
-actor Teacher
-
 rectangle "Digital Displayboard System" {
-    Administrator --> (Log in)
-    Administrator --> (Create announcement)
-    Administrator --> (Update announcement)
-    Administrator --> (Delete announcement)
-    Administrator --> (View announcements)
-    Administrator --> (View statistics)
-
-    Student --> (View announcements)
-    Student --> (View statistics)
-
-    Teacher --> (View announcements)
-    Teacher --> (View statistics)
+    Admin -- (Manage Posts)
+    Admin -- (Manage Categories)
+    Admin -- (View Dashboard)
+    Admin -- (Search and Filter Content)
+    Admin -- (View Statistics)
 }
-
 @enduml

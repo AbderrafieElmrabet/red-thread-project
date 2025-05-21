@@ -1,19 +1,12 @@
-
 @startuml
 left to right direction
+actor Admin
 
-actor Administrator
-actor Student
-actor Teacher
-
-rectangle "Digital Displayboard System" {
-    Administrator --> (View announcements)
-    Administrator --> (View statistics)
-
-    Student --> (View announcements)
-    Student --> (View statistics)
-
-    Teacher --> (View announcements)
-    Teacher --> (View statistics)
+rectangle "Sprint 1: Display statistics"{
+    Admin -- (View Dashboard for statistics)
+    (View Dashboard for statistics) <.. (See Recent Posts) : <<extend>>
+    (View Dashboard for statistics) <.. (View Post Statistics) : <<extend>>
+    (View Dashboard for statistics) <.. (View Category Usage) : <<extend>>
+    (View Dashboard for statistics) <.. (Posts, Users, Categories) : <<extend>>
 }
 @enduml
